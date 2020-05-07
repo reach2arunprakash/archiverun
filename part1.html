@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	.container {
+	border: 2px solid blue;
+	/*background: red;
+  	padding: 10px;*/
+  	display:flex;
+}
+.qarea {
+    width: 48%; 
+    height:100%;
+    float:left;
+    border: 2px solid white;
+
+}
+.codezone {
+	height:100%;
+    width: 50%; 
+    float:left;
+    border: 2px solid green;
+
+}
+.codebox {
+   height: 500px;
+   width: 100%;
+  /* padding:1%;*/
+   border:none;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+#codebutton {
+ padding: .5em;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 6px;
+ color: #fff;
+ font-family: 'Oswald';
+ font-size: 20px;
+ text-decoration: none;
+ border: none;
+}
+#codebutton:hover {
+ border: none;
+ background: orange;
+ box-shadow: 0px 0px 1px #777;
+}
+</style>
+<body>
+	<div class="container">
+		<div id="codedesc" class="qarea">
+			Seapoet is a kid who want to get the full name of her cat. Help her to write th code. <br>
+			var cat_obj = {firstname:"arun ",lastname:"prakash"};
+
+
+
+</div>
+		<div id="codearea" class="codezone">
+		<textarea name="textarea" placeholder="Enter the text..."  id="codeEditor" class ="codebox">
+
+
+//Don't touch below code. Danger zone starts
+// This will be the object structure 
+//var cat_obj = {firstname:"arun ",lastname:"prakash"};
+
+result = "";
+result = f(cat_obj)
+
+//Danger zone ends.
+
+// Your code zone starts
+
+function f(obj)
+{
+	// do something
+
+	console.log(obj);
+	if ('firstname' in obj) {
+   		var fullname = obj.firstname + obj.lastname;
+  		console.log("in if "+ fullname);
+   		return fullname;
+	}
+	else
+	{
+	    console.log("test");
+	    return "NA";
+	}
+
+} ; 
+
+
+	</textarea>
+
+		<input type="button" id="codebutton" name="test" value="Run tests"/>
+
+	   </div>
+
+
+    </div>
+    
+	
+
+ <script src="scripts.js"></script>
+</body>
+</html>
